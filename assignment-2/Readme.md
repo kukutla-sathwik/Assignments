@@ -1,1 +1,0 @@
-This Java project shows how to use basic collections like List (ArrayList), Set (HashSet), and Map (HashMap). It lets you add, remove, and search elements easily. Lists keep items in order, Sets avoid duplicates, and Maps store data as key-value pairs. These collections make data handling faster and simpler. A small test file is also included to show their basic use in programs.
