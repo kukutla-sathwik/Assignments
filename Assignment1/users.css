@@ -1,0 +1,137 @@
+/* ===== Reset Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Body Styling ===== */
+body {
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Navbar ===== */
+nav {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Title Center */
+nav .title {
+  position: relative;
+}
+
+/* Back to Home Link */
+nav .home-link {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  background: #0077b6;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+/* ===== Main Content ===== */
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+/* ===== Container and Cards ===== */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #fff7e6;
+  width: 200px;
+  min-height: 220px;
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ===== Button ===== */
+button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #ffb703;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .card {
+    width: 150px;
+  }
+
+  img {
+    height: 120px;
+  }
+
+  nav .home-link {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    right: 10px;
+  }
+}
