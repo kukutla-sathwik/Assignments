@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { fetchProducts } from '../features/products/productsSlice';
 import ProductCard from './ProductCard';
+import Add from './Add';
 
 const Wrapper = styled.main`
   max-width: 1200px;
@@ -56,6 +57,9 @@ const ProductList = () => {
 
   return (
     <Wrapper>
+      
+      <Add/>
+      
       <Title>Products</Title>
       <Grid>
         {items.map((product) => (
