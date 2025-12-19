@@ -62,7 +62,7 @@ function Home() {
 
   return (
     <Section>
-      <Title>GitHub Radar</Title>
+      <Title>GitHub Mini</Title>
       <Subtitle>
         Explore GitHub users, their repositories, and open-source projects.
       </Subtitle>

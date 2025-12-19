@@ -1,16 +1,67 @@
-# React + Vite
+ users response
+ /*{
+  "login": "kukutla-sathwik",
+  "id": 152612153,
+  "node_id": "U_kgDOCRitOQ",
+  "avatar_url": "https://avatars.githubusercontent.com/u/152612153?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/kukutla-sathwik",
+  "html_url": "https://github.com/kukutla-sathwik",
+  "followers_url": "https://api.github.com/users/kukutla-sathwik/followers",
+  "following_url": "https://api.github.com/users/kukutla-sathwik/following{/other_user}",
+  "gists_url": "https://api.github.com/users/kukutla-sathwik/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/kukutla-sathwik/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/kukutla-sathwik/subscriptions",
+  "organizations_url": "https://api.github.com/users/kukutla-sathwik/orgs",
+  "repos_url": "https://api.github.com/users/kukutla-sathwik/repos",
+  "events_url": "https://api.github.com/users/kukutla-sathwik/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/kukutla-sathwik/received_events",
+  "type": "User",
+  "user_view_type": "public",
+  "site_admin": false,
+  "name": null,
+  "company": null,
+  "blog": "",
+  "location": null,
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "twitter_username": null,
+  "public_repos": 2,
+  "public_gists": 0,
+  "followers": 0,
+  "following": 1,
+  "created_at": "2023-12-01T11:39:54Z",
+  "updated_at": "2025-10-16T16:14:51Z"
+}*/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[
+  {
+    "id": 1077403935,
+    "node_id": "R_kgDOQDfhHw",
+    "name": "Assignment-1",
+    "full_name": "kukutla-sathwik/Assignment-1",
+    "private": false,
+    "owner": {
+      "login": "kukutla-sathwik",
+      "id": 152612153,
+      "node_id": "U_kgDOCRitOQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/152612153?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kukutla-sathwik",
+      "html_url": "https://github.com/kukutla-sathwik",
+      "followers_url": "https://api.github.com/users/kukutla-sathwik/followers",
+      "following_url": "https://api.github.com/users/kukutla-sathwik/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kukutla-sathwik/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kukutla-sathwik/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kukutla-sathwik/subscriptions",
+      "organizations_url": "https://api.github.com/users/kukutla-sathwik/orgs",
+      "repos_url": "https://api.github.com/users/kukutla-sathwik/repos",
+      "events_url": "https://api.github.com/users/kukutla-sathwik/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kukutla-sathwik/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+]

@@ -1,6 +1,6 @@
 export async function fetchGitHubUser(username) {
   const res = await fetch(`https://api.github.com/users/${username}`);
-
+ 
   if (res.status === 404) {
     throw new Error("User not found");
   }

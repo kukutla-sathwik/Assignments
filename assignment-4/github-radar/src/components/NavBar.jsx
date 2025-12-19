@@ -83,7 +83,7 @@ function NavBar() {
 
   return (
     <Header>
-      <Brand to="/">GitHub Radar</Brand>
+      <Brand to="/">GitHub Mini</Brand>
 
       <Nav>
         <NavItem to="/" end>

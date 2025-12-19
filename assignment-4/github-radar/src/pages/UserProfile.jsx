@@ -95,10 +95,6 @@ const RepoDesc = styled.p`
   color: ${({ theme }) => theme.colors.textMuted};
 `;
 
-const RepoMeta = styled.small`
-  font-size: 0.8rem;
-  color: ${({ theme }) => theme.colors.textMuted};
-`;
 
 function UserProfile() {
   const { username } = useParams();
@@ -152,14 +148,13 @@ function UserProfile() {
       <ProfileCard>
         <Avatar src={user.avatar_url} alt={user.login} />
         <div>
-          <Name>{user.name || user.login}</Name>
-          <Username>@{user.login}</Username>
-          {user.bio && <Bio>{user.bio}</Bio>}
+          <Name>{user.login}</Name>
+          
           <Meta>
             Followers: {user.followers} · Following: {user.following}
           </Meta>
           <Meta>Public repos: {user.public_repos}</Meta>
-          {user.location && <Meta>📍 {user.location}</Meta>}
+         
           {user.html_url && (
             <GitHubLink href={user.html_url} target="_blank" rel="noreferrer">
               View on GitHub
@@ -178,11 +173,9 @@ function UserProfile() {
               <RepoName to={`/repo/${repo.owner.login}/${repo.name}`}>
                 {repo.name}
               </RepoName>
+
               {repo.description && <RepoDesc>{repo.description}</RepoDesc>}
-              <RepoMeta>
-                ⭐ {repo.stargazers_count} ·{" "}
-                {repo.language || "Unknown language"}
-              </RepoMeta>
+              
             </RepoItem>
           ))}
         </RepoList>
