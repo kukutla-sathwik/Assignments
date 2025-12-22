@@ -1,11 +1,17 @@
-import React from "react";
-import { Table } from "antd";
+import { Table, Skeleton, Empty, Alert } from "antd";
 import { useQuery } from "@tanstack/react-query";
 import { fetchProducts } from "../api/products";
 import { useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ProductTable({ search }) {
-  const { data = [], isLoading } = useQuery({
+  const navigate = useNavigate();
+
+  const {
+    data = [],
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: ["products", search],
     queryFn: () => fetchProducts(search),
   });
@@ -20,14 +26,28 @@ function ProductTable({ search }) {
     []
   );
 
+  if (isLoading) {
+    return <Skeleton active paragraph={{ rows: 6 }} />;
+  }
+
+  if (isError) {
+    return <Alert type="error" message="Failed to load products" />;
+  }
+
+  if (data.length === 0) {
+    return <Empty description="No products found" />;
+  }
+
   return (
     <Table
-      loading={isLoading}
       dataSource={data}
       columns={columns}
       rowKey="id"
+      onRow={(record) => ({
+        onClick: () => navigate(`/products/${record.id}`),
+      })}
     />
   );
 }
 
-export default React.memo(ProductTable);
+export default ProductTable;

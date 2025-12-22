@@ -1,4 +1,4 @@
-import { Modal, Form, Input, InputNumber, Button } from "antd";
+import { Modal, Form, Input, InputNumber } from "antd";
 
 export default function AddProductModal({ open, onClose, onSubmit }) {
   const [form] = Form.useForm();
@@ -17,7 +17,7 @@ export default function AddProductModal({ open, onClose, onSubmit }) {
         form={form}
         layout="vertical"
         onFinish={(values) => {
-          onSubmit(values);   // go to confirm page
+          onSubmit(values);
           form.resetFields();
         }}
       >

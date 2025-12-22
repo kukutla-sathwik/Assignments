@@ -1,9 +1,9 @@
 import { useState, useCallback } from "react";
 import { DatePicker, Input, Button, Space, Typography } from "antd";
 import dayjs from "dayjs";
+import { useNavigate } from "react-router-dom";
 import ProductTable from "../components/ProductTable";
 import AddProductModal from "../components/AddProductModal";
-import { useNavigate } from "react-router-dom";
 
 const { Title } = Typography;
 
@@ -14,14 +14,13 @@ export default function ProductsPage() {
     dayjs().subtract(7, "day"),
     dayjs(),
   ]);
-
   const [search, setSearch] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
 
-  // PERFORMANCE: stable callback
   const handleSubmit = useCallback(
-    (data) => {
-      navigate("/confirm", { state: data });
+    (product) => {
+      setModalOpen(false);
+      navigate("/confirm", { state: product });
     },
     [navigate]
   );

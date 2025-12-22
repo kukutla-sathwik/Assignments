@@ -9,22 +9,13 @@ import {
 } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
+import { createProduct } from "../api/products";
 import { useState } from "react";
 
 export default function ConfirmProductPage() {
   const { state } = useLocation();
   const navigate = useNavigate();
   const [confirmed, setConfirmed] = useState(false);
-
-  if (!state) {
-    return <p>No product data found</p>;
-  }
-
-  const createProduct = async (product) => {
-    const res = await axios.post("https://dummyjson.com/products/add", product);
-    return res.data;
-  };
 
   const mutation = useMutation({
     mutationFn: createProduct,
@@ -34,6 +25,8 @@ export default function ConfirmProductPage() {
     },
   });
 
+  if (!state) return <p>No product data found.</p>;
+
   return (
     <Card title="Confirm Product" style={{ margin: 24 }}>
       <Form
@@ -41,7 +34,7 @@ export default function ConfirmProductPage() {
         initialValues={state}
         onFinish={() => mutation.mutate(state)}
       >
-        <Form.Item label="Product Title" name="title">
+        <Form.Item label="Title" name="title">
           <Input disabled />
         </Form.Item>
 
@@ -58,20 +51,18 @@ export default function ConfirmProductPage() {
             checked={confirmed}
             onChange={(e) => setConfirmed(e.target.checked)}
           >
-            I confirm that the above details are correct
+            I confirm the above details
           </Checkbox>
         </Form.Item>
 
-        <Form.Item>
-          <Button
-            type="primary"
-            htmlType="submit"
-            disabled={!confirmed}
-            loading={mutation.isLoading}
-          >
-            Confirm & Submit
-          </Button>
-        </Form.Item>
+        <Button
+          type="primary"
+          htmlType="submit"
+          disabled={!confirmed}
+          loading={mutation.isLoading}
+        >
+          Confirm & Submit
+        </Button>
       </Form>
     </Card>
   );

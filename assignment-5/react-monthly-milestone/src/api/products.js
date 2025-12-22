@@ -9,6 +9,11 @@ export const fetchProducts = async (search) => {
   return res.data.products;
 };
 
+export const fetchProductById = async (id) => {
+  const res = await axios.get(`https://dummyjson.com/products/${id}`);
+  return res.data;
+};
+
 export const createProduct = async (product) => {
   const res = await axios.post(
     "https://dummyjson.com/products/add",
