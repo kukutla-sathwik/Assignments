@@ -11,17 +11,24 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { createProduct } from "../api/products";
 import { useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 
 export default function ConfirmProductPage() {
   const { state } = useLocation();
   const navigate = useNavigate();
   const [confirmed, setConfirmed] = useState(false);
 
+  const queryClient=useQueryClient();
+
   const mutation = useMutation({
     mutationFn: createProduct,
     onSuccess: () => {
       message.success("Product created successfully!");
       navigate("/");
+      queryClient.setQueryData(["products",""],(oldData)=>{
+        
+        return [state,...oldData]
+      })
     },
   });
 

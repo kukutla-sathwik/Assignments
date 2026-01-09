@@ -21,6 +21,7 @@ export default function ProductsPage() {
     (product) => {
       setModalOpen(false);
       navigate("/confirm", { state: product });
+      
     },
     [navigate]
   );

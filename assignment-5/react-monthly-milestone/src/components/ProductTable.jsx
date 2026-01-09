@@ -14,6 +14,7 @@ function ProductTable({ search }) {
   } = useQuery({
     queryKey: ["products", search],
     queryFn: () => fetchProducts(search),
+    staleTime:1000*60*60
   });
 
   const columns = useMemo(
