@@ -1,0 +1,36 @@
+
+body {
+  background-color: #f5f7fa;
+}
+
+
+.clickable-row {
+  cursor: pointer;
+}
+
+
+.clickable-row:hover {
+  background-color: #fafafa !important;
+}
+
+
+.ant-table {
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+
+.ant-table-container {
+  padding: 8px;
+}
+
+
+.ant-table-thead > tr > th {
+  font-weight: 600;
+  background-color: #fafafa;
+}
+
+
+.ant-table-row {
+  transition: background-color 0.2s ease;
+}

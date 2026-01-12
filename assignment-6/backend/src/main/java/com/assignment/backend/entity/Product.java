@@ -2,8 +2,12 @@ package com.assignment.backend.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -15,6 +19,7 @@ import java.util.List;
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String title;
@@ -27,6 +32,8 @@ public class Product {
     private Integer stock;
     private String availabilityStatus;
     private String barcode;
+    @Column(name = "created_at")
+    private LocalDate createdAt;
 
     @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference
